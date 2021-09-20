@@ -201,12 +201,15 @@ function matchWithRegEx(regEx, field, message) {
 const login = document.querySelector('#login');
 const forgotPassword = document.querySelector('#forgotPassword');
 
-document.querySelector(".linkCreateAccount").addEventListener("click", e => {
-    e.preventDefault();
-    login.classList.add("form--hidden");
-    accountCreation.classList.remove("form--hidden");
-    forgotPassword.classList.add("form--hidden");
-});
+let links = document.querySelectorAll(".linkCreateAccount");
+for (let link of links) {
+    link.addEventListener("click", e => {
+        e.preventDefault();
+        login.classList.add("form--hidden");
+        accountCreation.classList.remove("form--hidden");
+        forgotPassword.classList.add("form--hidden");
+    })
+}
 
 document.querySelector(".linkLogin").addEventListener("click", e => {
     e.preventDefault();
