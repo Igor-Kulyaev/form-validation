@@ -285,4 +285,3 @@ forgotPassword.addEventListener('submit', function (event) {
         }, 1000);
     }
 });
-
